@@ -110,4 +110,6 @@ export EDITOR=vim
 # MY ALIASES
 alias gitlog='git log --oneline --graph --decorate'
 
-
+# ADD SSH KEYS
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/github

@@ -112,4 +112,9 @@ alias gitlog='git log --oneline --graph --decorate'
 
 # ADD SSH KEYS
 eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/github
+source ~/.ssh/ssh_keys
+
+# LOCAL ZSH CONFIGURATION
+source ~/.config/local_environment
+
+

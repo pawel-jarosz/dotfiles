@@ -111,10 +111,16 @@ export EDITOR=vim
 alias gitlog='git log --oneline --graph --decorate'
 
 # ADD SSH KEYS
-eval "$(ssh-agent -s)"
-source ~/.ssh/ssh_keys
+eval "$(ssh-agent -s)" >/dev/null
+
+find ~/.ssh/ -type f -not -name "config" -and -not -name "known_hosts" -and -not -name "*.pub" -exec ssh-add {}  \; >/dev/null
 
 # LOCAL ZSH CONFIGURATION
-source ~/.config/local_environment
+LOCAL_CONFIG=~/.config/local_environment.sh
+if [[ -f "$LOCAL_CONFIG" ]]; then
+	source $LOCAL_CONFIG
+else
+	touch $LOCAL_CONFIG
+fi
 
 

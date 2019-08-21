@@ -104,23 +104,11 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 
-# MY ENVIRONMENTAL VARIABLES
-export EDITOR=vim
-
-# MY ALIASES
-alias gitlog='git log --oneline --graph --decorate'
-
-# ADD SSH KEYS
-eval "$(ssh-agent -s)" >/dev/null
-
-find ~/.ssh/ -type f -not -name "config" -and -not -name "known_hosts" -and -not -name "*.pub" -exec ssh-add {}  \; >/dev/null
+GLOBAL_CONFIG=~/.config/global_environment.sh
+source $GLOBAL_CONFIG
 
 # LOCAL ZSH CONFIGURATION
 LOCAL_CONFIG=~/.config/local_environment.sh
-if [[ -f "$LOCAL_CONFIG" ]]; then
-	source $LOCAL_CONFIG
-else
-	touch $LOCAL_CONFIG
-fi
+source $LOCAL_CONFIG
 
 

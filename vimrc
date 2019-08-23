@@ -59,7 +59,7 @@ filetype plugin indent on    " required
 noremap <F2> :NERDTreeToggle<CR>
 noremap <F3> :ConqueTermSplit bash<CR>
 noremap <F4> :TagbarToggle<CR>
-noremap <s-p> :CtrlPTag<CR>
+noremap <c-o> :CtrlPTag<CR>
 nnoremap <s-down> <c-w>w
 nnoremap <s-up> <c-w>W
 nnoremap <s-left> <c-w>h

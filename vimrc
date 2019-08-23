@@ -34,6 +34,12 @@ Plugin 'kien/ctrlp.vim'		  " wyszukiwanie plików, tagów itd. itp.
 Plugin 'valloric/youcompleteme'   " kolorowanie składni
 Plugin 'majutsushi/tagbar'	  " pasek boczny z tagami wewnątrz pliku
 
+"Wsparcie dla języka D"
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'idanarye/vim-dutyl'
+Plugin 'Sirsireesh/vim-dlang-phobos-highlighter'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required

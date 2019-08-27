@@ -1,5 +1,6 @@
 export EDITOR=vim
 
+alias gdb='/usr/bin/gdb --tui'
 alias gitlog='git log --oneline --graph --decorate'
 
 # Add existing ssh keys

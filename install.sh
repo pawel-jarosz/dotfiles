@@ -25,3 +25,5 @@ if [[ -f ~/.vimrc ]]; then
 fi
 
 ln -s ~/.config/dotfiles/vimrc ~/.vimrc
+ln -s ~/.config/dotfiles/gdbinit ~/.gdbinit
+

@@ -27,3 +27,6 @@ fi
 ln -s ~/.config/dotfiles/vimrc ~/.vimrc
 ln -s ~/.config/dotfiles/gdbinit ~/.gdbinit
 
+TYPOS_ALIASES=~/.config/typos.sh
+ln -s ~/.config/dotfiles/typos.sh $TYPOS_ALIASES
+

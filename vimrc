@@ -73,4 +73,4 @@ let g:ycm_min_num_of_chars_for_completition=1
 let g:ycm_cache_omnifunc=0
 let g:ycm_seed_identifiers_with_syntax=1
 
-
+set number

@@ -33,7 +33,14 @@ Plugin 'idanarye/vim-vebugger'    " wsparcie dla debuggera
 Plugin 'kien/ctrlp.vim'		  " wyszukiwanie plików, tagów itd. itp.
 Plugin 'valloric/youcompleteme'   " kolorowanie składni
 Plugin 'majutsushi/tagbar'	  " pasek boczny z tagami wewnątrz pliku
+Plugin 'jistr/vim-nerdtree-tabs'
 
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tomasr/molokai'
+Plugin 'bling/vim-airline'
+Plugin 'delimitMate.vim'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'scrooloose/syntastic'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -54,6 +61,9 @@ noremap <F2> :NERDTreeToggle<CR>
 noremap <F3> :ConqueTermSplit bash<CR>
 noremap <F4> :TagbarToggle<CR>
 noremap <c-o> :CtrlPTag<CR>
+noremap <c-n> :bn<CR>
+noremap <c-c> :bd<CR>
+noremap <c-m> :bp<CR>
 nnoremap <s-down> <c-w>w
 nnoremap <s-up> <c-w>W
 nnoremap <s-left> <c-w>h
@@ -66,5 +76,15 @@ let g:ycm_collect_identifiers_from_tags_files=1
 let g:ycm_min_num_of_chars_for_completition=1
 let g:ycm_cache_omnifunc=0
 let g:ycm_seed_identifiers_with_syntax=1
-
+syntax on
 set number
+
+set background=dark
+
+colorscheme solarized
+set laststatus=2
+
+let g:airline_detect_paste=1
+let g:airline#extensions#tabline#enabled=1
+set expandtab ts=4 sw=4 ai
+

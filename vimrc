@@ -88,3 +88,5 @@ let g:airline_detect_paste=1
 let g:airline#extensions#tabline#enabled=1
 set expandtab ts=4 sw=4 ai
 
+source $HOME/.config/dotfiles/cscope_maps.vim
+

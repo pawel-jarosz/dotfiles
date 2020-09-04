@@ -116,6 +116,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
+
+export TINY_DESK_WORKSPACES="$HOME/.tiny-desk"
+export TINY_DESK_INSTALL_DIR="$HOME/.config/tiny-desk"
+source "$TINY_DESK_INSTALL_DIR/tiny_desk.sh"
+
 GLOBAL_CONFIG=~/.config/global_environment.sh
 
 source $GLOBAL_CONFIG

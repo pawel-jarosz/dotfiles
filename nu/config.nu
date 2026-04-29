@@ -3,6 +3,8 @@ oh-my-posh init nu --config fish
 let os = (sys host | get name)
 let long_os_version = (sys host | get long_os_version)
 
+$env.DOTFILES_STANDALONE_CONFIGS = [".gitignore"]
+
 if $os == "Windows" {
   overlay use windows_overlay.nu
 }

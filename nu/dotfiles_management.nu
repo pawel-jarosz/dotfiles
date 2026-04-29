@@ -1,5 +1,3 @@
-const common_files = [".gitconfig"]
-
 def mode_completer [] {
   ["local_to_repo" "repo_to_local"]
 }
@@ -10,7 +8,7 @@ def dotfiles_sync_local_to_repo [] {
   rclone sync $env.NUSHELL_CONFIG_PATH ([$env.DOTFILES_REPO "nu"] | path join)
   rclone sync $env.VIM_CONFIG_PATH ([$env.DOTFILES_REPO "nvim"] | path join)
   
-  for $file in $common_files {
+  for $file in $env.DOTFILES_STANDALONE_CONFIGS {
     try {
       rm ([$env.DOTFILES_REPO $file] | path join)
     } catch { |err| echo $err.msg }
@@ -25,7 +23,7 @@ def dotfiles_sync_repo_to_local [] {
   rclone sync ([$env.DOTFILES_REPO "nu"] | path join) $env.NUSHELL_CONFIG_PATH
   rclone sync ([$env.DOTFILES_REPO "nvim"] | path join) $env.VIM_CONFIG_PATH
 
-  for $file in $common_files {
+  for $file in $env.DOTFILES_STANDALONE_CONFIGS {
     try {
       rm ([$env.HOME $file] | path join)
     } catch { |err|

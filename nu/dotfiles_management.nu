@@ -1,3 +1,7 @@
+def mode_completer [] {
+  ["local_to_repo" "repo_to_local"]
+}
+
 def dotfiles_sync_local_to_repo [] {
   echo "Syncing local configurations to repository..."
   rclone sync $env.NUSHELL_CONFIG_PATH ([$env.DOTFILES_REPO "nu"] | path join)
@@ -10,7 +14,7 @@ def dotfiles_sync_repo_to_local [] {
   rclone sync ([$env.DOTFILES_REPO "nvim"] | path join) $env.VIM_CONFIG_PATH
 }
 
-export def dotfiles_sync [mode: string] {
+export def dotfiles_sync [mode: string@mode_completer] {
   match $mode {
     "local_to_repo" => { dotfiles_sync_local_to_repo }
     "repo_to_local" => { dotfiles_sync_repo_to_local }

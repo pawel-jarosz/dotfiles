@@ -1,2 +1,2 @@
-cargo install ripgrep bat zellij sd zoxide nu-lint zellij bat rclone fd-find
+cargo install ripgrep bat zellij sd zoxide nu-lint bat rclone fd-find git-delta
 

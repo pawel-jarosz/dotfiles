@@ -12,7 +12,6 @@ winget install sharkdp.fd
 winget install RARLab.WinRAR
 winget install Ghisler.TotalCommander
 winget install Rclone.Rclone
-winget install dandavison.delta
 
 oh-my-posh font install
 mkdir ([$env.APPDATA, "nushell", "vendor", "autoload"] | path join)

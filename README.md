@@ -31,3 +31,20 @@ Add entry for `nushell`
 ### Visual Studio
 
 It is easier to install just *Visual Studio*, not only *Build Tools* as for some tools there is needed *Windows SDK*.
+
+## Cross-platform tools
+
+| Tool  | Package Manager | Description | Unix-world alternative |
+|-------|-----------------|-------------|--------------|
+| Zellij | cargo | terminal multiplexer| tmux, screen |
+| Rclone | OS-specific | file synchronization | rsync |
+| Bottom | cargo | performance viewer | top, htop |
+| Bat | cargo | file viewer | cat |
+| Eva | cargo | REPL for calculator | bt |
+| Zoxide | cargo | smart change directory | cd |
+| fd | cargo | modern find replacement | fd |
+| ripgrep | cargo | modern grep replacement | grep |
+| Delta | cargo | better git diff | git-diff |
+| Difftastic | OS-specific | cross-platform diff | diff |
+| Hexyl | cargo | cross-platform hexdump alternative | hexdump |
+| sd | cargo | cross-platform sed replacement | sed |

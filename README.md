@@ -48,3 +48,5 @@ It is easier to install just *Visual Studio*, not only *Build Tools* as for some
 | Difftastic | OS-specific | cross-platform diff | diff |
 | Hexyl | cargo | cross-platform hexdump alternative | hexdump |
 | sd | cargo | cross-platform sed replacement | sed |
+| neovim | OS-specific | code editor |  |
+| fzf | OS-specific | fuzzy finder | |
